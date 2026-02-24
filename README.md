@@ -91,6 +91,7 @@ This makes the system accessible for biological research and hypothesis generati
 ---
 
 ## 📁 Repository Structure
+```
 rx-interactome/
 │
 ├── app/                         # Application interface for interactome reasoning
@@ -115,3 +116,4 @@ rx-interactome/
 ├── LICENSE                      # Project license
 │
 └── README.md                    # Project documentation
+```
