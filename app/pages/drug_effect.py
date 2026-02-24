@@ -116,7 +116,7 @@ else:
 def stream_outputs():
     for output in st.session_state.effect_output:
         yield output
-        time.sleep(0.05)
+        time.sleep(0.005)
 st.markdown('<div class="title">InteractomeRx 🧬</div>', unsafe_allow_html=True)
 st.divider()
 col1, col2, = st.columns(2)

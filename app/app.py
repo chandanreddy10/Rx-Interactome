@@ -247,6 +247,7 @@ with col2:
                 time.sleep(0.5)
 
         response = generate_response(prompt, log_box)
+        print(response)
         interactome, graph = generate_graph(response)
         st.session_state["outputs"] = response
         st.session_state["graph"] = graph
