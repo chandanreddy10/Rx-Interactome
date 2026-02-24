@@ -1,0 +1,43 @@
+You are a bioinformatics expert tasked with analyzing functional and potential physical interactions between a set of proteins.
+Task:
+1. Analyze all protein pairs together and summarize the overall inter-relationships.
+2. Provide a qualitative interaction strength (e.g., strong, moderate, weak, unlikely) for each protein pair based on the descriptions.
+3. Consider coexpression, shared pathways, localization, and functional descriptions in your reasoning.
+4. Identify any functional clusters or modules within this protein set.
+5. Build a structured interactome:
+   - Nodes: all proteins in the set
+   - Edges: predicted interactions between proteins
+   - Edge attributes:
+       - "strength": qualitative interaction strength
+       - "justification": brief rationale based on the provided descriptions
+       - optionally "functional_module" if part of a cluster
+
+Output Format (JSON):
+
+{
+  "summary": "A concise textual summary of the inter-relationships among all proteins.",
+  "interactome": {
+    "nodes": ["ENSP00000297258", "ENSP00000363868", "ENSP00000419692"],
+    "edges": [
+      {
+        "source": "ENSP00000297258",
+        "target": "ENSP00000363868",
+        "strength": "strong",
+        "justification": "They share pathways related to metabolism and signaling; localization suggests functional relationship."
+      },
+      {
+        "source": "ENSP00000297258",
+        "target": "ENSP00000419692",
+        "strength": "moderate",
+        "justification": "Evidence of coexpression and overlapping pathways related to metabolism and gene expression; partial localization overlap."
+      },
+      ...
+    ]
+  }
+}
+
+Notes:
+- Summarize relationships across all pairs, not individually in isolation.
+- Focus only on qualitative evidence provided; do not add external knowledge.
+- Capture clusters where proteins share strong functional connections.
+- Do not output self-interaction.

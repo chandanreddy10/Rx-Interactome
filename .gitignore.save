@@ -1,0 +1,14 @@
+/Downloads
+/files
+/lib
+/Processed
+/sft_input
+/sft_input_size_3
+/sft_output
+/sft_output_size_3
+/txgemma_finetuned
+/data_prep.log
+/output.log
+/output2.log
+/run.log
+/interactome_project/medgemma-4b-it-sft-lora-int
